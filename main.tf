@@ -1,15 +1,15 @@
 module "myvnet" {
     source = "./modules/myvnet"
     resourcegroup_details = {
-      location = "eastus"
-      name = "ntier-rg"
+      location = var.location
+      name = var.name
     }
     vnet_details = {
-      address_space = [ "10.10.0.0/16" ]
-      name = "ntier"
+      address_space = var.address_space
+      name = var.vnet-name
     }
     subnet_details = {
-        names = [ "web", "db" ]
+        names = var.subnet-names
     }
 
 }

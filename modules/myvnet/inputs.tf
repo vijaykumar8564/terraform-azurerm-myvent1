@@ -3,10 +3,6 @@ variable "resourcegroup_details" {
             name=string
             location=string
             })
-    default = {
-      location = "eastus"
-      name = "ntier"
-    }
 }
 
 variable "vnet_details" {
